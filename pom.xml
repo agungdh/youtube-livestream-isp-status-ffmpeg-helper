@@ -12,7 +12,7 @@
 
     <groupId>id.my.agungdh</groupId>
     <artifactId>ffmpeg-helper</artifactId>
-    <version>0.0.1</version>
+    <version>0.1.0</version>
     <name>ffmpeg-helper</name>
     <description>ffmpeg-helper</description>
 

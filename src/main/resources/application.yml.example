@@ -17,5 +17,5 @@ status:
 
   # Ping options
   ping-timeout-ms: ${PING_TIMEOUT_MS:1000}
-  use-shell-ping: ${USE_SHELL_PING:false}   # kalau true, pakai perintah `ping` OS
+  use-shell-ping: ${USE_SHELL_PING:true}   # kalau true, pakai perintah `ping` OS
   ping-count: ${PING_COUNT:1}               # hanya untuk shell ping
