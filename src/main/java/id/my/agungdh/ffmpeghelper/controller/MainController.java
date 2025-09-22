@@ -1,6 +1,6 @@
-package com.example.demo.controller;
+package id.my.agungdh.ffmpeghelper.controller;
 
-import com.example.demo.service.StatusImageService;
+import id.my.agungdh.ffmpeghelper.service.StatusImageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;

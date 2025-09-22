@@ -11,10 +11,10 @@
     </parent>
 
     <groupId>id.my.agungdh</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>ffmpeg-helper</artifactId>
     <version>0.0.1</version>
-    <name>demo</name>
-    <description>demo</description>
+    <name>ffmpeg-helper</name>
+    <description>ffmpeg-helper</description>
 
     <properties>
         <java.version>25</java.version>

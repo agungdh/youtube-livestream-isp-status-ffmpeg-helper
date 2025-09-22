@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package id.my.agungdh.ffmpeghelper.service;
 
 import org.springframework.stereotype.Service;
 
