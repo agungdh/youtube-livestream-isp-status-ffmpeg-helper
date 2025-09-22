@@ -1,3 +1,21 @@
 spring:
   application:
     name: ffmpeg-helper
+
+status:
+  timezone: ${TZ:Asia/Jakarta}
+  width: 1280
+  height: 720
+  output-path: ${OUTPUT_PATH:./current.png}
+  fixed-rate-ms: ${FIXED_RATE_MS:60000}
+
+  # === Konfigurasi target dinamis ===
+  # Comma-separated: name=ip
+  service-map: ${SERVICE_MAP:google=8.8.8.8,cloudflare=1.1.1.1,router=192.168.1.1,modem=10.0.0.1}
+  # Daftar nama yang IP-nya disensor (comma-separated, cocokkan dengan "name" di atas)
+  masked-services: ${MASK_IPS:router,modem}
+
+  # Ping options
+  ping-timeout-ms: ${PING_TIMEOUT_MS:1000}
+  use-shell-ping: ${USE_SHELL_PING:false}   # kalau true, pakai perintah `ping` OS
+  ping-count: ${PING_COUNT:1}               # hanya untuk shell ping

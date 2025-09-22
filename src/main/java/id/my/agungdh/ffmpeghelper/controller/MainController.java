@@ -1,6 +1,5 @@
 package id.my.agungdh.ffmpeghelper.controller;
 
-import id.my.agungdh.ffmpeghelper.service.StatusImageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,15 +13,8 @@ public class MainController {
     @Value("${spring.application.name}")
     private String appName;
 
-    private final StatusImageService statusImageService;
-
     @GetMapping
     public String tehe() {
         return appName;
-    }
-
-    @GetMapping("/generate")
-    public void generateImage() throws IOException {
-        statusImageService.generate();
     }
 }
