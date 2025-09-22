@@ -4,15 +4,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class TargetConfig {
-    public static class Entry {
-        public final String name;
-        public final String ip;
-        public final boolean masked;
-        public Entry(String name, String ip, boolean masked) {
-            this.name = name; this.ip = ip; this.masked = masked;
-        }
-    }
-
     public static List<Entry> parse(StatusProperties props) {
         Set<String> masked = Arrays.stream(
                         Optional.ofNullable(props.getMaskedServices()).orElse("")
@@ -36,5 +27,17 @@ public class TargetConfig {
 
     public static String maskIp(String ip) {
         return "xxx.xxx.xxx.xxx";
+    }
+
+    public static class Entry {
+        public final String name;
+        public final String ip;
+        public final boolean masked;
+
+        public Entry(String name, String ip, boolean masked) {
+            this.name = name;
+            this.ip = ip;
+            this.masked = masked;
+        }
     }
 }

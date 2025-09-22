@@ -1,15 +1,19 @@
 package id.my.agungdh.ffmpeghelper;
 
+import org.springframework.stereotype.Service;
+
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.nio.file.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import javax.imageio.ImageIO;
-import org.springframework.stereotype.Service;
 
 @Service
 public class StatusImageService {
@@ -35,7 +39,7 @@ public class StatusImageService {
         g.fillRect(0, 0, W, H);
 
         // Header
-        g.setPaint(new Color(245,245,245));
+        g.setPaint(new Color(245, 245, 245));
         g.fillRect(0, 0, W, 90);
 
         g.setPaint(Color.BLACK);
@@ -57,7 +61,7 @@ public class StatusImageService {
             int y = startY + i * lineH;
 
             // bullet
-            g.setPaint(up ? new Color(34,197,94) : new Color(239,68,68));
+            g.setPaint(up ? new Color(34, 197, 94) : new Color(239, 68, 68));
             g.fillOval(40, y - 18, 16, 16);
 
             // name + ip
@@ -68,7 +72,7 @@ public class StatusImageService {
 
             // status
             String label = up ? "UP" : "DOWN";
-            g.setPaint(up ? new Color(34,197,94) : new Color(239,68,68));
+            g.setPaint(up ? new Color(34, 197, 94) : new Color(239, 68, 68));
             int textW = g.getFontMetrics().stringWidth(label);
             g.drawString(label, W - 40 - textW, y);
         }

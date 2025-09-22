@@ -20,26 +20,83 @@ public class StatusProperties {
     private int pingCount = 1;
 
     // getters/setters ...
-    public String getTimezone() { return timezone; }
-    public void setTimezone(String timezone) { this.timezone = timezone; }
-    public int getWidth() { return width; }
-    public void setWidth(int width) { this.width = width; }
-    public int getHeight() { return height; }
-    public void setHeight(int height) { this.height = height; }
-    public String getOutputPath() { return outputPath; }
-    public void setOutputPath(String outputPath) { this.outputPath = outputPath; }
-    public long getFixedRateMs() { return fixedRateMs; }
-    public void setFixedRateMs(long fixedRateMs) { this.fixedRateMs = fixedRateMs; }
+    public String getTimezone() {
+        return timezone;
+    }
 
-    public String getServiceMap() { return serviceMap; }
-    public void setServiceMap(String serviceMap) { this.serviceMap = serviceMap; }
-    public String getMaskedServices() { return maskedServices; }
-    public void setMaskedServices(String maskedServices) { this.maskedServices = maskedServices; }
+    public void setTimezone(String timezone) {
+        this.timezone = timezone;
+    }
 
-    public int getPingTimeoutMs() { return pingTimeoutMs; }
-    public void setPingTimeoutMs(int pingTimeoutMs) { this.pingTimeoutMs = pingTimeoutMs; }
-    public boolean isUseShellPing() { return useShellPing; }
-    public void setUseShellPing(boolean useShellPing) { this.useShellPing = useShellPing; }
-    public int getPingCount() { return pingCount; }
-    public void setPingCount(int pingCount) { this.pingCount = pingCount; }
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public String getOutputPath() {
+        return outputPath;
+    }
+
+    public void setOutputPath(String outputPath) {
+        this.outputPath = outputPath;
+    }
+
+    public long getFixedRateMs() {
+        return fixedRateMs;
+    }
+
+    public void setFixedRateMs(long fixedRateMs) {
+        this.fixedRateMs = fixedRateMs;
+    }
+
+    public String getServiceMap() {
+        return serviceMap;
+    }
+
+    public void setServiceMap(String serviceMap) {
+        this.serviceMap = serviceMap;
+    }
+
+    public String getMaskedServices() {
+        return maskedServices;
+    }
+
+    public void setMaskedServices(String maskedServices) {
+        this.maskedServices = maskedServices;
+    }
+
+    public int getPingTimeoutMs() {
+        return pingTimeoutMs;
+    }
+
+    public void setPingTimeoutMs(int pingTimeoutMs) {
+        this.pingTimeoutMs = pingTimeoutMs;
+    }
+
+    public boolean isUseShellPing() {
+        return useShellPing;
+    }
+
+    public void setUseShellPing(boolean useShellPing) {
+        this.useShellPing = useShellPing;
+    }
+
+    public int getPingCount() {
+        return pingCount;
+    }
+
+    public void setPingCount(int pingCount) {
+        this.pingCount = pingCount;
+    }
 }
