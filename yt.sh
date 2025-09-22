@@ -6,7 +6,7 @@ MUSIK="music.mp3"
 RTMP_URL="rtmp://a.rtmp.youtube.com/live2/t6m2-g5wt-606q-raqq-fs8v"
 
 # ====== INPUT (hemat polling) ======
-# Baca 2 fps saja (cukup untuk gambar statis yang sesekali berubah)
+# Baca 1 fps saja (cukup untuk gambar statis yang sesekali berubah)
 IMG_INPUT_OPTS=(
   -f image2
   -pattern_type none
@@ -25,7 +25,7 @@ VIDEO_OPTS=(
   -c:v libx264
   -preset ultrafast     # paling ringan CPU
   -tune stillimage
-  -r 2                  # output 2 fps (CFR)
+  -r 1                  # output 1 fps (CFR)
   -g 4                  # GOP ~2 detik (rekomendasi YouTube ~2s)
   -bf 0                 # tanpa B-frames → aman DTS
   -vsync cfr
@@ -37,7 +37,7 @@ VIDEO_OPTS=(
 # Turunkan resolusi kalau perlu CPU makin hemat (pilih salah satu):
 #   720p (default): scale=1280:720
 #   480p (lebih hemat): scale=854:480
-SCALE_FILTER="scale=1280:720"
+SCALE_FILTER="scale=854:480"
 
 # ====== AUDIO ======
 AUDIO_OPTS=(
