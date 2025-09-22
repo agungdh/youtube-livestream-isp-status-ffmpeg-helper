@@ -31,4 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
 /status.png
+/src/main/resources/application.yml
