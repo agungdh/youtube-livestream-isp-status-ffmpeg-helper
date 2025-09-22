@@ -68,12 +68,6 @@
                 </configuration>
             </plugin>
 
-            <!-- GraalVM Native buildtools (konfigurasi dasar, tanpa buildArgs) -->
-            <plugin>
-                <groupId>org.graalvm.buildtools</groupId>
-                <artifactId>native-maven-plugin</artifactId>
-            </plugin>
-
             <!-- Spring Boot plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -89,54 +83,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <profiles>
-        <!-- x86_64: tambahkan -march=x86-64-v2 -->
-        <profile>
-            <id>native-x86</id>
-            <activation>
-                <property>
-                    <name>arch</name>
-                    <value>amd64</value>
-                </property>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.graalvm.buildtools</groupId>
-                        <artifactId>native-maven-plugin</artifactId>
-                        <configuration>
-                            <buildArgs>
-                                <buildArg>-march=x86-64-v2</buildArg>
-                            </buildArgs>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-
-        <!-- arm64: target armv8-a -->
-        <profile>
-            <id>native-arm</id>
-            <activation>
-                <property>
-                    <name>arch</name>
-                    <value>arm64</value>
-                </property>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.graalvm.buildtools</groupId>
-                        <artifactId>native-maven-plugin</artifactId>
-                        <configuration>
-                            <buildArgs>
-                                <buildArg>-march=armv8-a</buildArg>
-                            </buildArgs>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 </project>
